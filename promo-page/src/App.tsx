@@ -19,130 +19,19 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 
+import Collective from "./collective";
+import Technology from "./technology";
+import Footer from "./footer";
+
 import "./App.css";
+import Vision from "./vision";
 
-const techs = [
-  {
-    title: "WEB 3.0",
-    description:
-      "The first future-proof recruitment software ecosystem built on the blockchain",
-  },
-  {
-    title: "ONE VERSION OF THE TRUTH",
-    description:
-      "The first all-in-one, end-to-end recruitment technology with a single version of the truth.",
-  },
-  {
-    title: "BLOCKCHAIN TOKENOMICS",
-    description:
-      "Innovative pricing using blockchain tokens to PAYG only for the functions that you use.",
-  },
-  {
-    title: "ARTIFICIAL INTELLIGENCE",
-    description:
-      "Powerful AI automations enhance current workflows and pro-actively develop unexploited data-driven revenue-streams.",
-  },
-  {
-    title: "IMMERSIVE CANDIDATE ENGAGEMENT",
-    description:
-      "Candidate engagement like never before, through automations and immersive experiences.",
-  },
-  {
-    title: "METAVERSE READY",
-    description:
-      "Built-in Metaverse interoperability, enabling immersive engagement in the new world of remote working.",
-  },
+const pages = [
+  "Vision",
+  // "Contact",
+  "Team",
+  "Technology",
 ];
-
-const people = [
-  {
-    name: "CARLOS BENITO",
-    image: "/profiles/Carlos-Benito-Garcia.jpg",
-    role: "Business Growth Consultant",
-    linkedin: "https://www.linkedin.com/in/recruitmenttrainingexpert/",
-  },
-  {
-    name: "JÉRÔME LEBLANC BARBEDIENNE",
-    image: "/profiles/Jerome-Leblanc-Barbedienne.jpg",
-    role: "Wealth Management Operations",
-    linkedin: "https://www.linkedin.com/in/jeromeleblancbarbedienne/",
-  },
-  {
-    name: "PETER WHARTON",
-    image: "/profiles/Peter-Wharton.jpg",
-    role: "Executive Search Business Owner",
-    linkedin: "https://www.linkedin.com/in/peterdwharton/",
-  },
-  {
-    name: "JOSE MORENTE",
-    image: "/profiles/Jose-Morente.jpg",
-    role: "Executive Search Business Owner",
-    linkedin: "https://www.linkedin.com/in/jose-morente/",
-  },
-  {
-    name: "CLARE WATSON",
-    image: "/profiles/Clare-Watson.jpg",
-    role: "Digital Transformation Director",
-    linkedin: "https://www.linkedin.com/in/clarewatson12/",
-  },
-  // {
-  //   name: "ANDREW MARKHAM-DAVIES",
-  //   image: "",
-  //   role: "Blockchain & Tokenisation Specialist",
-  //   linkedin: null,
-  // },
-  {
-    name: "RICH COLVILL",
-    image: "/profiles/Rich-Colvill.jpg",
-    role: "Creative & Art Director",
-    linkedin: "https://www.linkedin.com/in/richcolvill/",
-  },
-  {
-    name: "STUART BROWN",
-    image: "/profiles/Stuart-Brown.jpg",
-    role: "Recruitment Group Investment Director",
-    linkedin: "https://www.linkedin.com/in/stuart-brown78/",
-  },
-  {
-    name: "SARAH GOODRICH",
-    image: "/profiles/Sarah-Goodrich.jpg",
-    role: "Recruitment COO",
-    linkedin: "https://www.linkedin.com/in/goodrichs/",
-  },
-  {
-    name: "PAUL RAWSON",
-    image: "/profiles/Paul-Rawson.jpg",
-    role: "Recruitment Marketing Transformation",
-    linkedin: "https://www.linkedin.com/in/paulrawsonmarketingdirector/",
-  },
-  {
-    name: "JESUS SAN JUAN",
-    image: "/profiles/Jesus.jpg",
-    role: "AI, Machine Learning, IoT Specialist",
-    linkedin:
-      "https://www.linkedin.com/in/jes%C3%BAs-juli%C3%A1n-san-juan-su%C3%A1rez-3b8aab5/",
-  },
-  {
-    name: "AHMED NAMIR",
-    image: "/profiles/Ahmed-Namir.jpg",
-    role: "Recruitment Business Owner",
-    linkedin: "https://www.linkedin.com/in/ahmednamir/",
-  },
-  {
-    name: "JAMES WOODHEAD",
-    image: "/profiles/James-Woodhead.jpg",
-    role: "Recruitment Head of Impact",
-    linkedin: "https://www.linkedin.com/in/james-woodhead-4b097555/",
-  },
-  {
-    name: "GAVIN CHASE",
-    image: "/profiles/Gavin-Chase.png",
-    role: "Recruitment Partnerships Director",
-    linkedin: "https://www.linkedin.com/in/executive/",
-  },
-];
-
-const pages = ["Vision", "Contact", "Team", "Technology"];
 
 function App() {
   return (
@@ -208,7 +97,84 @@ function App() {
         </Toolbar>
       </AppBar>
 
-      <Container maxWidth={false} sx={{ background: "#1e132c" }}>
+      <Container
+        maxWidth={false}
+        sx={{
+          display: { xs: "none", md: "block" },
+          background: "#1e132c",
+          paddingLeft: "0 !important",
+          paddingRight: "0 !important",
+        }}
+      >
+        <Grid container spacing={2} sx={{}}>
+          <Grid item xs={3}></Grid>
+          <Grid item xs={9}>
+            <Typography
+              sx={{
+                padding: "10rem 0 3rem",
+                color: "#e8e8e8",
+                fontSize: "1.5rem",
+                fontWeight: 200,
+              }}
+              component="p"
+              variant="h2"
+              textAlign="left"
+            >
+              Build deeper relationships, gain insights
+              <br /> and be more effective.
+            </Typography>
+          </Grid>
+
+          <Grid item xs={12}>
+            <img
+              style={{
+                position: "relative",
+                zIndex: 1,
+                marginBottom: "-7rem",
+                width: "80%",
+                marginLeft: "50%",
+                transform: "translateX(-50%)",
+              }}
+              src="/Stelthio_lock-up-light.png"
+              alt=""
+            />
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sx={{
+              minHeight: "500px",
+              // backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "100%",
+              backgroundImage: { xs: "none", md: "url(/Stelthio_space.png)" },
+            }}
+          >
+            <Typography
+              sx={{
+                padding: "10rem 0 0 7rem",
+                color: "#e8e8e8",
+                fontSize: "2rem",
+                fontWeight: 300,
+              }}
+              component="p"
+              variant="h4"
+              textAlign="left"
+            >
+              Go further.
+            </Typography>
+          </Grid>
+        </Grid>
+      </Container>
+
+      <Container
+        maxWidth={false}
+        sx={{
+          background: "#1e132c",
+          // paddingLeft: "0 !important",
+          paddingRight: "0 !important",
+        }}
+      >
         <Grid
           container
           spacing={2}
@@ -230,7 +196,7 @@ function App() {
               sx={{
                 padding: "5rem 0 0",
                 color: "#e8e8e8",
-                fontSize: "2rem",
+                fontSize: "1.5rem",
                 fontWeight: 200,
               }}
               component="p"
@@ -254,7 +220,7 @@ function App() {
         blur={0}
         bgImage="/Stelthio_space.png"
         bgImageAlt="the cat"
-        strength={400}
+        strength={300}
         style={{ marginTop: "3rem" }}
       >
         <Container>
@@ -295,7 +261,7 @@ function App() {
         <Grid container spacing={2}>
           <Grid item xs={12} md={4} sx={{ padding: { xs: "0", md: "0 3rem" } }}>
             <Typography
-              sx={{ textAlign: "center", color: "#e8e8e8", padding: "0 1rem" }}
+              sx={{ textAlign: "left", color: "#e8e8e8", padding: "0 1rem" }}
               component="p"
             >
               STEALTHIO is designed by talent experts, for recruitment industry
@@ -305,7 +271,7 @@ function App() {
           </Grid>
           <Grid item xs={12} md={4} sx={{ padding: { xs: "0", md: "0 3rem" } }}>
             <Typography
-              sx={{ textAlign: "center", color: "#e8e8e8", padding: "0 1rem" }}
+              sx={{ textAlign: "left", color: "#e8e8e8", padding: "0 1rem" }}
               component="p"
             >
               STEALTHIO is far more than just another combined CRM with ATS,
@@ -315,7 +281,7 @@ function App() {
           </Grid>
           <Grid item xs={12} md={4} sx={{ padding: { xs: "0", md: "0 3rem" } }}>
             <Typography
-              sx={{ textAlign: "center", color: "#e8e8e8", padding: "0 1rem" }}
+              sx={{ textAlign: "left", color: "#e8e8e8", padding: "0 1rem" }}
               component="p"
             >
               STEALTHIO is here to completely transform and revolutionise the
@@ -325,112 +291,9 @@ function App() {
           </Grid>
         </Grid>
       </Container>
+      <Vision />
 
-      <Container
-        id="vision"
-        maxWidth={false}
-        sx={{
-          padding: "0",
-          background: "#1e132c",
-        }}
-      >
-        <Grid container spacing={2}>
-          <Grid item md={6} sx={{ display: { xs: "none", md: "block" } }}>
-            <img
-              style={{ width: "100%", height: "100%" }}
-              src="/Stelthio_graphic-1.png"
-              alt=""
-            />
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{ display: "flex", alignItems: "center" }}
-          >
-            <Box
-              sx={{
-                textAlign: "left",
-                alignItems: "left",
-                display: "flex",
-                flexDirection: "column",
-                paddingLeft: "3rem",
-              }}
-            >
-              <Typography
-                variant="h5"
-                component="p"
-                sx={{
-                  marginBottom: "2rem",
-                  color: "#e8e8e8",
-                  textAlign: "left",
-                }}
-              >
-                VISON
-              </Typography>
-
-              <Typography
-                component="p"
-                sx={{
-                  padding: "0 6rem 0 0",
-                  marginBottom: "1rem",
-                  color: "#e8e8e8",
-                }}
-              >
-                To positively impact lives and careers, with the world’s first
-                web 3.0 native, end-to-end, all-in- one, fully immersive talent
-                management ecosystem.
-              </Typography>
-
-              <Typography
-                variant="h5"
-                component="p"
-                sx={{ marginBottom: "2rem", color: "#e8e8e8" }}
-              >
-                MISSION
-              </Typography>
-
-              <Typography
-                component="p"
-                sx={{
-                  padding: "0 6rem 0 0",
-                  marginBottom: "1rem",
-                  color: "#e8e8e8",
-                }}
-              >
-                To completely disrupt the recruitment tech industry with a
-                tech-stack paradigm shift
-              </Typography>
-
-              <Typography
-                component="p"
-                sx={{
-                  padding: "0 6rem 0 0",
-                  marginBottom: "1rem",
-                  color: "#e8e8e8",
-                }}
-              >
-                To enable recruiters to step-change operational efficiencies and
-                revenues
-              </Typography>
-
-              <Typography
-                component="p"
-                sx={{
-                  padding: "0 6rem 0 0",
-                  marginBottom: "1rem",
-                  color: "#e8e8e8",
-                }}
-              >
-                To inspire and enable, engaging and fully immersive candidate
-                experiences
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
-
-      <Container
+      {/* <Container
         id="contact"
         sx={{
           padding: "5rem 0 5rem",
@@ -541,185 +404,11 @@ function App() {
             </Box>
           </Grid>
         </Grid>
-      </Container>
+      </Container> */}
 
-      <Container
-        id="team"
-        maxWidth={false}
-        sx={{ padding: "5rem 0 5rem", background: "#1e132c" }}
-      >
-        <Grid container spacing={2}>
-          <Grid item xs={1} md={2}></Grid>
-          <Grid item xs={11} md={6}>
-            <Box
-              sx={{
-                textAlign: "left",
-                alignItems: "left",
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <Typography
-                variant="h5"
-                component="p"
-                sx={{ marginBottom: "2rem", color: "#e8e8e8" }}
-              >
-                MEET THE COLLECTIVE
-              </Typography>
-
-              <Typography
-                component="p"
-                sx={{
-                  padding: { xs: "1rem", md: "0 0 0 5rem" },
-                  marginBottom: "1rem",
-                  color: "#e8e8e8",
-                }}
-              >
-                Unified by a shared vision of the possibilities of disruptive
-                technology and how these technologies can be used to deliver a
-                true paradigm-shift in the way we do recruitment.
-              </Typography>
-
-              <Typography
-                component="p"
-                sx={{
-                  marginBottom: "1rem",
-                  padding: { xs: "1rem", md: "0 0 0 5rem" },
-                  color: "#e8e8e8",
-                }}
-              >
-                Here's what were bring to the collective.
-              </Typography>
-
-              <Typography
-                component="p"
-                sx={{
-                  marginBottom: "3rem",
-                  padding: { xs: "1rem", md: "0 0 0 5rem" },
-                  color: "#e8e8e8",
-                }}
-              >
-                Contact us if you believe that you could add value to the team.
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
-
-        <Grid container spacing={2}>
-          {people.map((person) => (
-            <Grid item xs={12} md={4} lg={3}>
-              <Box
-                sx={{
-                  textAlign: "left",
-                  alignItems: { xs: "center", md: "left" },
-                  display: "flex",
-                  paddingRight: { xs: "0rem", md: "3rem" },
-                  flexDirection: "column",
-                  marginBottom: "1rem",
-                }}
-              >
-                <a href={person.linkedin} target={"_blank"}>
-                  <img
-                    style={{
-                      width: 200,
-                      height: 200,
-                      borderRadius: "20px",
-                      border: "5px solid #e8e8e8",
-                    }}
-                    alt={person.name}
-                    src={person.image}
-                  />
-                </a>
-                <Typography
-                  variant="h6"
-                  component="p"
-                  sx={{ color: "#e8e8e8", textAlign: "left" }}
-                >
-                  {person.name}
-                </Typography>
-                <Typography component="h3" sx={{ color: "#e8e8e8" }}>
-                  {person.role}
-                </Typography>
-              </Box>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-
-      <Container
-        id="technology"
-        sx={{ padding: "5rem 0 5rem", background: "#18191d" }}
-        maxWidth={false}
-      >
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <Box
-              sx={{
-                textAlign: "left",
-                alignItems: "left",
-                display: "flex",
-                flexDirection: "column",
-                padding: { xs: " 1rem", md: 0 },
-              }}
-            >
-              <Typography
-                variant="h5"
-                component="p"
-                sx={{ marginBottom: "1rem", color: "#e8e8e8" }}
-              >
-                TECHNOLOGY
-              </Typography>
-
-              <Typography
-                component="p"
-                sx={{
-                  padding: "0",
-                  marginBottom: "5rem",
-                  color: "#e8e8e8",
-                }}
-              >
-                A taste of Stealthio disruption:
-              </Typography>
-
-              <Grid container spacing={2}>
-                {techs.map((tech) => (
-                  <Grid item xs={12} md={6} lg={4}>
-                    <Box
-                      sx={{
-                        textAlign: "left",
-                        alignItems: "left",
-                        display: "flex",
-                        flexDirection: "column",
-                      }}
-                    >
-                      <Typography
-                        variant="h5"
-                        component="p"
-                        sx={{ marginBottom: "2rem", color: "#e8e8e8" }}
-                      >
-                        {tech.title}
-                      </Typography>
-
-                      <Typography
-                        component="p"
-                        sx={{
-                          padding: "0",
-                          marginBottom: "1rem",
-                          color: "#e8e8e8",
-                        }}
-                      >
-                        {tech.description}
-                      </Typography>
-                    </Box>
-                  </Grid>
-                ))}
-              </Grid>
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
-
-      <img style={{ width: "100%" }} src="/Stelthio_pattern-dark.png" alt="" />
+      <Collective />
+      <Technology />
+      <Footer />
     </>
   );
 }
