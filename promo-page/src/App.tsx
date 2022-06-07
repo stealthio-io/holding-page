@@ -276,7 +276,8 @@ function App() {
             >
               STEALTHIO is far more than just another combined CRM with ATS,
               it’s so much more than simple AI automations, and reassuringly, it
-              isn’t another expensive API plug-in tool to add to
+              isn’t another expensive API plug-in tool to add to your
+              tech-stack.
             </Typography>
           </Grid>
           <Grid item xs={12} md={4} sx={{ padding: { xs: "0", md: "0 3rem" } }}>

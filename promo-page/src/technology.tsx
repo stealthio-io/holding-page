@@ -26,12 +26,12 @@ const techs = [
       "The first future-proof recruitment software ecosystem built on the blockchain",
   },
   {
-    title: "One version of the truth",
+    title: "One Version of the Truth",
     description:
       "The first all-in-one, end-to-end recruitment technology with a single version of the truth.",
   },
   {
-    title: "Blockchain tokenomics",
+    title: "Blockchain Tokenomics",
     description:
       "Innovative pricing using blockchain tokens to PAYG only for the functions that you use.",
   },
@@ -41,12 +41,12 @@ const techs = [
       "Powerful AI automations enhance current workflows and pro-actively develop unexploited data-driven revenue-streams.",
   },
   {
-    title: "Immersive candidate engagement",
+    title: "Immersive Candidate Engagement",
     description:
       "Candidate engagement like never before, through automations and immersive experiences.",
   },
   {
-    title: "Metaverse ready",
+    title: "Metaverse Ready",
     description:
       "Built-in Metaverse interoperability, enabling immersive engagement in the new world of remote working.",
   },
@@ -104,7 +104,7 @@ export default () => {
                       variant="h6"
                       component="p"
                       sx={{
-                        marginBottom: "2rem",
+                        marginBottom: "0rem",
                         color: "#e8e8e8",
                         fontWeight: 300,
                       }}

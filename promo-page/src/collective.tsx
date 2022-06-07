@@ -165,7 +165,7 @@ export default () => {
                 color: "#e8e8e8",
               }}
             >
-              Here's what were bring to the collective.
+              Here's what we bring to the collective.
             </Typography>
 
             <Typography
